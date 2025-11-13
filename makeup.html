@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Makeup - Adema's Beauty</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="progressBar"></div>
+  <header class="main-header"><div class="logo">💋Makeup</div><div class="menu-icon" id="menuToggle"><span></span><span></span><span></span></div></header>
+
+  <main class="container catalog-section">
+    <h1>Makeup Collection</h1>
+    <p class="small">Enhance your natural beauty.</p>
+
+    <div class="catalog-grid">
+      <div class="product-card" data-id="p_pusy">
+        <img class="lazy" data-src="https://pcdn.goldapple.ru/p/p/19000388767/web/696d674d61696e5064708ddc5c81852aa1d.jpg" alt="PUSY">
+        <h3>PUSY Brow Mascara</h3>
+        <p class="small">Natural volume without heaviness.</p>
+        <div class="price">3450₸</div>
+        <div class="rating"><span class="star" data-value="1">☆</span><span class="star" data-value="2">☆</span><span class="star" data-value="3">☆</span><span class="star" data-value="4">☆</span><span class="star" data-value="5">☆</span><span class="value small">0/5</span></div>
+        <div style="display:flex;gap:8px"><button class="btn-primary buy" data-id="p_pusy">Buy</button><button class="ghost-btn copy-btn" data-copy="PUSY Brow Mascara">Copy</button></div>
+      </div>
+
+      <div class="product-card" data-id="p_vivienne">
+        <img class="lazy" data-src="https://basket-26.wbbasket.ru/vol4770/part477029/477029288/images/big/1.webp" alt="Vivienne">
+        <h3>VIVIENNE SABO La La Laque</h3>
+        <p class="small">Glossy balm-lipstick.</p>
+        <div class="price">2200₸</div>
+        <div class="rating"><span class="star" data-value="1">☆</span><span class="star" data-value="2">☆</span><span class="star" data-value="3">☆</span><span class="star" data-value="4">☆</span><span class="star" data-value="5">☆</span><span class="value small">0/5</span></div>
+        <div style="display:flex;gap:8px"><button class="btn-primary buy" data-id="p_vivienne">Buy</button><button class="ghost-btn copy-btn" data-copy="VIVIENNE SABO La La Laque">Copy</button></div>
+      </div>
+
+      <div class="product-card" data-id="p_macaron">
+        <img class="lazy" data-src="https://static.onlinetrade.ru/img/items/b/rumyana_dlya_litsa_matovye_vivienne_sabo_macaron_ton_04_3123797_7.jpg" alt="Macaron">
+        <h3>Macaron Matte Blush</h3>
+        <p class="small">Matte finish for a natural look.</p>
+        <div class="price">1750₸</div>
+        <div class="rating"><span class="star" data-value="1">☆</span><span class="star" data-value="2">☆</span><span class="star" data-value="3">☆</span><span class="star" data-value="4">☆</span><span class="star" data-value="5">☆</span><span class="value small">0/5</span></div>
+        <div style="display:flex;gap:8px"><button class="btn-primary buy" data-id="p_macaron">Buy</button><button class="ghost-btn copy-btn" data-copy="Macaron Matte Blush">Copy</button></div>
+      </div>
+    </div>
+  </main>
+
+  <footer><div class="container"><div>© 2025 Adema’s Beauty Shop</div><div id="datetimeFooter"></div></div></footer>
+</body>
+</html>

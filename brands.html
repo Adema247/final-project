@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Brands - Adema's Beauty</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="progressBar"></div>
+  <header class="main-header"><div class="logo">💄Brands</div><div class="menu-icon" id="menuToggle"><span></span><span></span><span></span></div></header>
+
+  <main class="container catalog-section">
+    <h1>Featured Brands</h1>
+    <p class="small">We collaborate with trusted brands.</p>
+
+    <div class="catalog-grid" id="brandsGrid">
+      <div class="product-card" data-id="brand_chanel"><img class="lazy" data-src="https://i.pinimg.com/originals/96/47/22/96472272414230a9395ecafb17b05da2.png" alt="Chanel"><h3>Chanel</h3><p class="small">Timeless luxury.</p></div>
+      <div class="product-card" data-id="brand_dior"><img class="lazy" data-src="https://i.pinimg.com/originals/69/88/83/698883b9543172c3b37dfe7fac04c624.jpg" alt="Dior"><h3>Dior</h3><p class="small">Innovative skincare & perfumes.</p></div>
+      <div class="product-card" data-id="brand_ysl"><img class="lazy" data-src="https://image.winudf.com/v2/image1/Y29tLnNhaW50bGF1cmVudC5yb2Nrb25tYW5fc2NyZWVuXzFfMTU3Nzg4MTU4N18wNTI/screen-1.jpg?fakeurl=1&type=.jpg" alt="YSL"><h3>Yves Saint Laurent</h3><p class="small">Bold & luxurious.</p></div>
+    </div>
+
+    <section class="faq" style="margin-top:18px;">
+      <button class="accordion-button" aria-expanded="false">How to choose the right brand?</button>
+      <div class="accordion-panel"><p>Consider reviews, ingredients and your skin type. Test samples when possible.</p></div>
+
+      <button class="accordion-button" aria-expanded="false">Do you ship internationally?</button>
+      <div class="accordion-panel"><p>Currently we ship across Kazakhstan; international shipping is under consideration.</p></div>
+    </section>
+  </main>
+
+  <footer><div class="container"><div>© 2025 Adema’s Beauty Shop</div><div id="datetimeFooter"></div></div></footer>
+</body>
+</html>

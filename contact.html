@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Contact - Adema's Beauty</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="progressBar"></div>
+  <header class="main-header"><div class="logo">Contact</div><div class="menu-icon" id="menuToggle"><span></span><span></span><span></span></div></header>
+
+  <main class="container contact-page">
+    <h1>Send a Message</h1>
+    <p class="small">Have a question? Write to us.</p>
+
+    <form id="contactForm" class="contact-form" novalidate>
+      <label>Name<input id="name" name="name" class="form-input"></label><div id="nameError" class="error"></div>
+      <label>Email<input id="email" name="email" class="form-input" type="email"></label><div id="emailError" class="error"></div>
+      <label>Message<textarea id="message" name="message" class="form-input" rows="5"></textarea></label><div id="messageError" class="error"></div>
+      <div style="margin-top:8px"><button type="submit" class="btn-primary">Send</button></div>
+    </form>
+  </main>
+
+  <footer><div class="container"><div>© 2025 Adema’s Beauty Shop</div><div id="datetimeFooter"></div></div></footer>
+
+  <script>
+    // small inline validation (additional to global handlers)
+    $('#contactForm').on('submit', function(e){
+      e.preventDefault();
+      $('#nameError,#emailError,#messageError').text('');
+      const name = $('#name').val().trim();
+      const email = $('#email').val().trim();
+      const msg = $('#message').val().trim();
+      let ok=true;
+      if(!name){ $('#nameError').text('Please enter your name'); ok=false; }
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ $('#emailError').text('Enter a valid email'); ok=false; }
+      if(!msg || msg.length<10){ $('#messageError').text('Message must be at least 10 characters'); ok=false; }
+      if(!ok) return;
+      showToast('Message sent ✅');
+      $(this)[0].reset();
+    });
+  </script>
+</body>
+</html>

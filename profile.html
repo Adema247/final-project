@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Profile - Adema’s Beauty Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js" defer></script>
+  <style>
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    main.container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      padding: 40px 16px;
+      min-height: 70vh;
+    }
+
+    .profile-card {
+      color: var(--text);
+      border-radius: 20px;
+      padding: 30px 40px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .profile-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .profile-avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: var(--accent-2, #6c63ff);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 600;
+      margin: 0 auto 16px;
+    }
+
+    h2 {
+      margin: 8px 0;
+      font-size: 1.5rem;
+    }
+
+    .profile-info {
+      color: var(--text-muted, #777);
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+
+    .profile-cart {
+      font-size: 1rem;
+      margin-top: 18px;
+    }
+
+    .profile-actions {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .profile-actions button {
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      background: var(--accent-2, #6c63ff);
+      color: #fff;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .profile-actions button:hover {
+      background: var(--accent-hover, #5147d8);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="logo">👤 Profile</div>
+    <div class="menu-icon" id="menuToggle"><span></span><span></span><span></span></div>
+  </header>
+
+  <main class="container">
+    <div class="profile-card">
+      <div id="profileAvatar" class="profile-avatar">U</div>
+      <h2 id="profileNick">User123</h2>
+      <div id="profileName" class="profile-info">Full name: —</div>
+      <div id="profilePhone" class="profile-info">Phone: —</div>
+      <div id="profileEmail" class="profile-info">Email: —</div>
+
+      <div class="profile-cart">
+        🛒 <span id="profileCartCount">0</span> items in your cart
+      </div>
+
+      <div class="profile-actions">
+        <button id="clearCartBtn">🧹 Clear Cart</button>
+        <button id="logoutBtn">🚪 Logout</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Adema’s Beauty Shop <br>
+    <span id="datetimeFooter"></span>
+  </footer>
+
+  <!-- ✅ Код для загрузки пользователя -->
+  <script>
+  $(document).ready(function(){
+    const user = JSON.parse(localStorage.getItem('user'));
+
+    if(user){
+      $('#profileNick').text(user.nick);
+      $('#profileName').text('Full name: ' + user.fullname);
+      $('#profilePhone').text('Phone: ' + user.phone);
+      $('#profileEmail').text('Email: ' + user.email);
+      $('#profileAvatar').text(user.nick[0].toUpperCase());
+    } else {
+      $('#profileNick').text('Guest');
+      $('#profileAvatar').text('U');
+    }
+
+    $('#logoutBtn').click(function(){
+      localStorage.removeItem('user');
+      window.location.href = 'login.html';
+    });
+
+    $('#clearCartBtn').click(function(){
+      localStorage.removeItem('cart');
+      $('#profileCartCount').text('0');
+      alert('Cart cleared!');
+    });
+  });
+  </script>
+</body>
+</html>

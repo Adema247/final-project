@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Skincare - Adema's Beauty</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="progressBar"></div>
+  <header class="main-header"><div class="logo">✨Skincare</div><div class="menu-icon" id="menuToggle"><span></span><span></span><span></span></div></header>
+
+  <main class="container catalog-section">
+    <h1>Skincare Collection</h1>
+    <p class="small">Nourish and protect your skin.</p>
+
+    <div class="catalog-grid">
+      <div class="product-card" data-id="s_cerave">
+        <img class="lazy" data-src="https://avatars.mds.yandex.net/i?id=7ed1d12f2da93d6a96230e4f8179456b_l-5235392-images-thumbs&n=13" alt="CeraVe">
+        <h3>CeraVe Moisturizing Cream</h3>
+        <p class="small">Hydrating & barrier repair.</p>
+        <div class="price">5200₸</div>
+        <div class="rating"><span class="star" data-value="1">☆</span><span class="star" data-value="2">☆</span><span class="star" data-value="3">☆</span><span class="star" data-value="4">☆</span><span class="star" data-value="5">☆</span><span class="value small">0/5</span></div>
+        <div style="display:flex;gap:8px"><button class="btn-primary buy" data-id="s_cerave">Buy</button><button class="ghost-btn copy-btn" data-copy="CeraVe Moisturizing Cream">Copy</button></div>
+      </div>
+
+      <div class="product-card" data-id="s_theordinary">
+        <img class="lazy" data-src="https://avatars.mds.yandex.net/i?id=fe4da087f62c59950615b1189c21792305e3faf1-12434061-images-thumbs&n=13" alt="The Ordinary">
+        <h3>The Ordinary Hyaluronic Acid Serum</h3>
+        <p class="small">Hydration boost & elasticity.</p>
+        <div class="price">3600₸</div>
+        <div class="rating"><span class="star" data-value="1">☆</span><span class="star" data-value="2">☆</span><span class="star" data-value="3">☆</span><span class="star" data-value="4">☆</span><span class="star" data-value="5">☆</span><span class="value small">0/5</span></div>
+        <div style="display:flex;gap:8px"><button class="btn-primary buy" data-id="s_theordinary">Buy</button><button class="ghost-btn copy-btn" data-copy="The Ordinary Hyaluronic Acid Serum">Copy</button></div>
+      </div>
+
+      <div class="product-card" data-id="s_innisfree">
+        <img class="lazy" data-src="https://avatars.mds.yandex.net/i?id=5e71fc64588a91f598224c73cfd59c3c_l-13083831-images-thumbs&n=13" alt="Innisfree">
+        <h3>Innisfree Green Tea Cleanser</h3>
+        <p class="small">Gentle cleanser with Jeju green tea.</p>
+        <div class="price">1900₸</div>
+        <div class="rating"><span class="star" data-value="1">☆</span><span class="star" data-value="2">☆</span><span class="star" data-value="3">☆</span><span class="star" data-value="4">☆</span><span class="star" data-value="5">☆</span><span class="value small">0/5</span></div>
+        <div style="display:flex;gap:8px"><button class="btn-primary buy" data-id="s_innisfree">Buy</button><button class="ghost-btn copy-btn" data-copy="Innisfree Green Tea Cleanser">Copy</button></div>
+      </div>
+    </div>
+  </main>
+
+  <footer><div class="container"><div>© 2025 Adema’s Beauty Shop</div><div id="datetimeFooter"></div></div></footer>
+</body>
+</html>

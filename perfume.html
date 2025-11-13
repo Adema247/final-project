@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Perfume - Adema's Beauty</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="progressBar"></div>
+  <header class="main-header"><div class="logo">🌸Perfume</div><div class="menu-icon" id="menuToggle"><span></span><span></span><span></span></div></header>
+
+  <main class="container catalog-section">
+    <h1>Perfume Collection</h1>
+    <p class="small">Find your signature scent.</p>
+
+    <div class="catalog-grid">
+      <div class="product-card" data-id="p_dior_jadore">
+        <img class="lazy" data-src="https://avatars.mds.yandex.net/get-mpic/13894603/2a00000196a7f2951c56d7f407a8d0d3e96b/orig" alt="Dior">
+        <h3>Dior J'adore Eau de Parfum</h3>
+        <p class="small">Iconic floral-fruity fragrance.</p>
+        <div class="price">12500₸</div>
+        <div class="rating"><span class="star" data-value="1">☆</span><span class="star" data-value="2">☆</span><span class="star" data-value="3">☆</span><span class="star" data-value="4">☆</span><span class="star" data-value="5">☆</span><span class="value small">0/5</span></div>
+        <div style="display:flex;gap:8px"><button class="btn-primary buy" data-id="p_dior_jadore">Buy</button><button class="ghost-btn copy-btn" data-copy="Dior J'adore Eau de Parfum">Copy</button></div>
+      </div>
+
+      <div class="product-card" data-id="p_chanel_coco">
+        <img class="lazy" data-src="https://static.wixstatic.com/media/e4e86c_a8aee42ff7394527b32f7fbf1d9dea2b~mv2.webp" alt="Chanel">
+        <h3>Chanel Coco Mademoiselle</h3>
+        <p class="small">Fresh and seductive blend.</p>
+        <div class="price">13800₸</div>
+        <div class="rating"><span class="star" data-value="1">☆</span><span class="star" data-value="2">☆</span><span class="star" data-value="3">☆</span><span class="star" data-value="4">☆</span><span class="star" data-value="5">☆</span><span class="value small">0/5</span></div>
+        <div style="display:flex;gap:8px"><button class="btn-primary buy" data-id="p_chanel_coco">Buy</button><button class="ghost-btn copy-btn" data-copy="Chanel Coco Mademoiselle">Copy</button></div>
+      </div>
+
+      <div class="product-card" data-id="p_ysl_blackop">
+        <img class="lazy" data-src="https://img.grouponcdn.com/stores/BnbYrgS6mDpzver1Ncy7MTyQqLu/storespi30480174-970x582/v1/t4200x2520.jpg" alt="YSL">
+        <h3>YSL Black Opium</h3>
+        <p class="small">Warm and energetic fragrance.</p>
+        <div class="price">10300₸</div>
+        <div class="rating"><span class="star" data-value="1">☆</span><span class="star" data-value="2">☆</span><span class="star" data-value="3">☆</span><span class="star" data-value="4">☆</span><span class="star" data-value="5">☆</span><span class="value small">0/5</span></div>
+        <div style="display:flex;gap:8px"><button class="btn-primary buy" data-id="p_ysl_blackop">Buy</button><button class="ghost-btn copy-btn" data-copy="YSL Black Opium">Copy</button></div>
+      </div>
+    </div>
+  </main>
+
+  <footer><div class="container"><div>© 2025 Adema’s Beauty Shop</div><div id="datetimeFooter"></div></div></footer>
+</body>
+</html>

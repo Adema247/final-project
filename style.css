@@ -1,0 +1,169 @@
+:root{
+  --bg:#0d1b2a;
+  --card:#1b263b;
+  --muted:#a9bcd0;
+  --text:#e0e1dd;
+  --accent:#f6c400;
+  --accent-2:#415a77;
+  --success:#2ecc71;
+  --glass: rgba(255,255,255,0.03);
+}
+.light-theme{
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --muted:#5b6b75;
+  --text:#0d1b2a;
+  --accent:#ffb84d;
+  --accent-2:#6b85a5;
+  --glass: rgba(13,27,42,0.03);
+}
+
+/* Reset */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;font-family:"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text);
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;transition:background .25s,color .25s;
+}
+
+/* Header */
+.main-header, header.navbar { display:flex; align-items:center; justify-content:space-between; padding:12px 16px; background:linear-gradient(90deg,var(--accent-2),#415a77); box-shadow:0 6px 20px rgba(0,0,0,0.22); position:sticky; top:0; z-index:900; }
+.light-theme .main-header, .light-theme header.navbar { background:linear-gradient(90deg,#fff,#f0f4fb); }
+.logo{font-weight:700;font-size:1.05rem}
+.menu-icon{width:44px;height:40px;border-radius:8px;display:flex;flex-direction:column;justify-content:right;align-items:right ;cursor:pointer;border:1px solid rgba(255,255,255,0.06);background:transparent}
+.menu-icon span{display:block;width:18px;height:2px;background:var(--text);margin:3px 0;transition:all .18s}
+
+/* Side menu */
+.side-menu{position:fixed;right:-360px;top:0;height:100vh;width:320px;max-width:94%;background:linear-gradient(180deg,var(--card),rgba(0,0,0,0.03));box-shadow:-14px 0 50px rgba(0,0,0,0.5);z-index:1500;padding:18px;display:flex;flex-direction:column;gap:12px;transition:right .28s}
+.side-menu.open{right:0}
+.profile-section{display:flex;align-items:center;gap:12px}
+.profile-pic{width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,0.04);display:flex;justify-content:center;align-items:center;font-size:1.25rem;color:var(--muted)}
+.profile-info p{margin:0;font-weight:700}
+.profile-info button{margin-top:6px;padding:6px 8px;border-radius:8px;border:none;background:transparent;color:var(--text);cursor:pointer}
+
+/* links */
+.menu-links{display:flex;flex-direction:column;gap:8px;padding-top:6px}
+.menu-links a, .menu-links button{display:block;text-decoration:none;color:var(--text);padding:10px;border-radius:8px;background:transparent;border:none;text-align:left;font-weight:600;cursor:pointer}
+.menu-links .cities p{margin:6px 0 4px;color:var(--muted);font-weight:700}
+.city-item{padding:8px;border-radius:8px;border:1px dashed rgba(255,255,255,0.03);margin-bottom:6px;color:var(--text);cursor:pointer}
+
+/* side bottom */
+.side-bottom{margin-top:auto;color:var(--muted);font-size:0.9rem;display:flex;flex-direction:column;gap:6px}
+
+/* Progress */
+#progressBar{position:fixed;left:0;top:0;height:4px;width:0;background:linear-gradient(90deg,var(--accent),#ff6f91);z-index:9999;transition:width .12s linear}
+
+/* containers */
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+
+/* hero */
+.hero-section{padding:28px 16px;text-align:center}
+.hero-section h1{font-size:1.8rem;margin:6px 0}
+.hero-section p{color:var(--muted);margin:6px 0 12px}
+
+/* buttons */
+.btn-primary{background:linear-gradient(90deg,var(--accent),#fb4bb7);border:none;color:white;padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer}
+.ghost-btn{background:transparent;border:none;color:var(--text);cursor:pointer;padding:6px}
+
+/* grid & cards */
+.catalog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
+.product-card{background:var(--card);padding:12px;border-radius:12px;box-shadow:0 8px 26px rgba(0,0,0,0.18);display:flex;flex-direction:column;align-items:center;gap:8px}
+.product-card img{width:100%;height:170px;object-fit:cover;border-radius:8px}
+.price{color:var(--muted);font-weight:700}
+
+/* rating */
+.rating{display:flex;gap:6px;align-items:center}
+.rating .star{cursor:pointer;color:var(--muted);font-size:1.2rem}
+.rating .star.active{color:var(--accent)}
+
+/* forms */
+.form-input{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text)}
+.small{font-size:0.95rem;color:var(--muted)}
+.error{color:#ffb3b3;font-size:0.9rem;min-height:1em}
+
+/* modal */
+.modal-overlay{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(3,10,18,0.6);z-index:2000;padding:12px}
+.modal{width:100%;max-width:560px;background:var(--card);padding:16px;border-radius:12px;box-shadow:0 30px 90px rgba(0,0,0,0.6)}
+
+/* footer */
+footer{margin-top:30px;background:var(--card);color:var(--muted);padding:12px 16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+
+/* toast */
+.toast{position:fixed;right:18px;bottom:18px;background:var(--card);color:var(--text);padding:10px;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.4);z-index:2200;display:none}
+
+/* helper */
+.hidden{display:none!important}
+
+/* responsive */
+@media(max-width:900px){
+  .menu-icon{width:40px;height:36px}
+  .profile-pic{width:48px;height:48px}
+  .product-card img{height:140px}
+}
+@media(max-width:600px){
+  .side-menu{width:92%}
+  .hero-section h1{font-size:1.4rem}
+}
+
+/* ---------- FAQ Accordion ---------- */
+.faq {
+  margin-top: 24px;
+}
+
+.faq .accordion-button {
+  width: 100%;
+  text-align: left;
+  color: var(--text);
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid #f548bb;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background-color:var(--bg);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq .accordion-button:hover {
+  background-color: var(--bg);
+  transform: scale(1.02);
+}
+
+.faq .accordion-button::after {
+  content: '+';
+  font-size: 0.8rem;
+  transition: transform 0.2s;
+}
+
+.faq .accordion-button[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+.faq .accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  background:var(--bg);
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0 0 8px 8px;
+  padding: 0 16px;
+  margin-bottom: 8px;
+}
+
+.faq .accordion-panel p {
+  margin: 12px 0;
+  line-height: 1.5;
+  color:var(--text);
+}
+
+/* Open panel style */
+.faq .accordion-button[aria-expanded="true"] + .accordion-panel {
+  max-height: 200px; /* или auto, но для анимации лучше фикс */
+  padding: 12px 16px;
+}

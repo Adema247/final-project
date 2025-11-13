@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Adema's Beauty Shop — Home</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="progressBar"></div>
+
+  <header class="main-header">
+    <div class="logo">Adema's Beauty</div>
+    <div class="menu-icon" id="menuToggle"><span></span><span></span><span></span></div>
+  </header>
+
+  <!-- side menu inserted by script if missing -->
+
+  <main class="hero-section container" id="mainContent">
+    <h1>Welcome to Adema’s Beauty Shop 💄</h1>
+    <p class="small">Discover premium makeup, skincare and perfumes.</p>
+    <a class="btn-primary" href="catalog.html">Explore Catalog</a>
+  </main>
+
+  <section class="container" style="padding:20px 0;">
+    <h2>Featured</h2>
+    <div class="product-card" style="max-width:720px;margin:12px auto" data-id="featured_001">
+      <img class="lazy" data-src="https://pcdn.goldapple.ru/p/p/19000388767/web/696d674d61696e5064708ddc5c81852aa1d.jpg" alt="Featured">
+      <h3>Featured Product</h3>
+      <h3>Discount code: BEAUTY2025 <button class="copy-btn small" data-copy="BEAUTY2025">Copy</button></h3>
+      <div class="price"><s>3450₸</s> <strong>2932₸</strong></div>
+      <div class="rating"><span class="star" data-value="1">☆</span><span class="star" data-value="2">☆</span><span class="star" data-value="3">☆</span><span class="star" data-value="4">☆</span><span class="star" data-value="5">☆</span><span class="value small">0/5</span></div>
+      <div style="display:flex;gap:8px;margin-top:8px"><button class="btn-primary buy" data-id="featured_001">Buy</button><button class="ghost-btn" onclick="document.location='makeup.html'">View</button></div>
+    </div>
+  </section>
+
+  <footer><div class="container"><div>© 2025 Adema’s Beauty Shop</div><div id="datetimeFooter"></div></div></footer>
+  <div id="globalToast" class="toast" style="display:none"></div>
+</body>
+</html>

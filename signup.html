@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Sign Up</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">Sign Up</div>
+    <div class="menu-icon" id="menuToggle"><span></span><span></span><span></span></div>
+  </header>
+
+  <main id="signupPage" class="container" style="padding:18px 0;">
+    <h2>Create account</h2>
+    <form id="signupFormPage">
+      <label>Nick<input id="su_nick" class="form-input"></label>
+      <label>Full name<input id="su_fullname" class="form-input"></label>
+      <label>Phone<input id="su_phone" class="form-input" placeholder="+7XXXXXXXXXX"></label>
+      <label>Email<input id="su_email" class="form-input" type="email"></label>
+      <label>Password<input id="su_pass" class="form-input" type="password"></label>
+      <div style="margin-top:10px">
+        <button class="btn-primary" type="submit">Create account</button>
+        <a href="login.html" class="ghost-btn">Login</a>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© 2025 Adema’s Beauty Shop</div>
+      <div id="datetimeFooter"></div>
+    </div>
+  </footer>
+
+  <!-- ✅ Добавлен код сохранения -->
+  <script>
+  $(document).ready(function(){
+    $('#signupFormPage').on('submit', function(e){
+      e.preventDefault();
+
+      const nick = $('#su_nick').val().trim();
+      const fullname = $('#su_fullname').val().trim();
+      const phone = $('#su_phone').val().trim();
+      const email = $('#su_email').val().trim();
+      const pass = $('#su_pass').val().trim();
+
+      if(!nick || !fullname || !phone || !email || !pass){
+        alert('Please fill all fields');
+        return;
+      }
+
+      // сохраняем данные пользователя в localStorage
+      const user = { nick, fullname, phone, email, pass };
+      localStorage.setItem('user', JSON.stringify(user));
+
+      alert('Account created successfully!');
+      window.location.href = 'profile.html';
+    });
+  });
+  </script>
+</body>
+</html>
