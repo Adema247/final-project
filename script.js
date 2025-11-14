@@ -304,6 +304,11 @@
     $('.main-header').append(`<span class="cart-badge" style="margin-left:10px">🛒${count}</span>`);
   }
 
+  function copyCode() {
+   const code = document.getElementById("promoCode").innerText;
+   navigator.clipboard.writeText(code);
+  }
+
   function playBuySound(){
     try{
       const ctx = new (window.AudioContext||window.webkitAudioContext)();
