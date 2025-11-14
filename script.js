@@ -304,10 +304,21 @@
     $('.main-header').append(`<span class="cart-badge" style="margin-left:10px">🛒${count}</span>`);
   }
 
-  function copyCode() {
-   const code = document.getElementById("promoCode").innerText;
-   navigator.clipboard.writeText(code);
-  }
+  $(document).ready(function () {
+   $(".copy-btn").on("click", function () {
+     const text = $(this).data("copy");
+
+     navigator.clipboard.writeText(text)
+       .then(() => {
+         $(this).text("Copied!");
+         setTimeout(() => $(this).text("Copy"), 1500);
+       })
+       .catch(() => {
+         alert("Failed to copy ✅");
+      });
+    });
+  });
+
 
   function playBuySound(){
     try{
