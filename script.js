@@ -111,6 +111,33 @@
     updateCartBadge();
   }
 
+  $(document).ready(function () {
+
+   const $menu = $(".nav-menu");
+   const $overlay = $("#menuOverlay");
+   const $toggle = $("#menuToggle");
+
+   // Открыть меню
+   $toggle.on("click", function () {
+     $menu.addClass("open");
+     $overlay.addClass("show");
+    });
+
+   // Закрыть меню при клике на overlay
+   $overlay.on("click", function () {
+     $menu.removeClass("open");
+     $overlay.removeClass("show");
+   });
+
+   // Закрыть меню при клике на ссылку
+   $(".nav-menu a").on("click", function () {
+     $menu.removeClass("open");
+     $overlay.removeClass("show");
+   });
+
+  });
+
+
   /* ---------- Theme ---------- */
   function bindThemeButtons(){
     $(document).on('click', '#themeToggle', function(){ 
